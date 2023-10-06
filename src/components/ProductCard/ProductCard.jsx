@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from '../Button/Button'
 import "./ProductCard.css"
+import { Fieldset }  from 'primereact/fieldset';
 
 export const ProductCard = ({product, className, onAdd}) => {
 
@@ -9,8 +10,9 @@ export const ProductCard = ({product, className, onAdd}) => {
   }
 
   return (
+    <Fieldset legend="Header" toggleable className={'headerLegend'}>
     <div className={'product ' + className}>
-      <div className={'img'}></div>
+      {/* <img src={'../assets/heli.jpg'}></img> */}
       <div className={'title'}>{product.title}</div>
       <div className={'description'}>{product.description}</div>
       <div className={'price'}>
@@ -20,5 +22,6 @@ export const ProductCard = ({product, className, onAdd}) => {
         Добавить в корзину
       </Button>
     </div>
+    </Fieldset>
   )
 }
