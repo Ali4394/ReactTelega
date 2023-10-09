@@ -1,4 +1,4 @@
-import './SpeedDialButton.css'
+import './SpeedDiaButton.css'
 import React, { useState } from 'react'
 import { SpeedDial } from 'primereact/speeddial';
 
@@ -13,25 +13,28 @@ export const SpeedDialButton = ({products}) => {
     { icon: 'pi pi-trash', command: () => { } }
   ];
 
-const addHelicopter =()=>{
-  products.push(data)
-}
-const deletehelcopter = (id) =>{
-  products = products.filter(item=()=>{})
-}
+  // const addHelicopter = (data) => {
+  //   products.push(data)
+  // }
 
+  // const deleteHelicopter = (id) => {
+  //   products = products.filter(item => item.id !== id)
+  // }
 
-const pdatehelcopter = (id) =>{
-  products = products.filter(item=()=>{
-    if(item.id === id){
-      return data
-    }
-  })
-}
+  // const updateHelicopter = (id, data) => {
+  //   products = products.map(item => {
+  //     if (item.id === id) {
+  //       return data
+  //     }
+  //     return item
+  //   })
+  // }
 
   return (
-    <div>
+    <div >
       <SpeedDial model={actionItems} visible={visible} onShow={() => setVisible(true)} onHide={() => setVisible(false)} className={'speedButton'} />
+      
     </div>
+
   )
 }
